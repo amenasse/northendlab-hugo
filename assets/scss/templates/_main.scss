@@ -7,9 +7,11 @@
 .banner {
   padding: 220px 0 120px;
   position: relative;
+
   @include desktop-lg {
     padding: 150px 0 100px;
   }
+
   @include desktop {
     padding: 100px 0 0;
   }
@@ -18,15 +20,19 @@
     position: absolute;
     bottom: 0;
     right: 30px;
+
     @include desktop-xl {
       max-width: 600px;
     }
+
     @include desktop {
       display: none;
     }
   }
-  .illustration-mobile{
+
+  .illustration-mobile {
     display: none;
+
     @include desktop {
       display: block;
     }
@@ -38,7 +44,7 @@
   padding: 60px 60px 40px;
 }
 
-.author-thumb{
+.author-thumb {
   height: 300px;
   width: 300px;
   object-fit: cover;
@@ -50,6 +56,7 @@
 
   .page-item {
     margin: 0 2px;
+
     .page-link {
       display: inline-block;
       width: 40px;
@@ -73,14 +80,18 @@
     }
   }
 }
-.post-title:hover{
+
+.post-title:hover {
   text-decoration: underline;
 }
-.post-meta{
+
+.post-meta {
   color: #999;
-  a{
+
+  a {
     color: inherit;
-    &:hover{
+
+    &:hover {
       color: $primary-color;
     }
   }
@@ -92,7 +103,7 @@
     margin-bottom: 20px;
   }
 
-  img{
+  img {
     max-width: 100%;
     height: auto;
   }
@@ -204,8 +215,8 @@
 }
 
 /* social icon */
-.social-icon{
-  a{
+.social-icon {
+  a {
     height: 45px;
     width: 45px;
     border: 1px solid $primary-color;
@@ -214,7 +225,8 @@
     text-align: center;
     display: block;
     color: $primary-color;
-    &:hover{
+
+    &:hover {
       background: $primary-color;
       color: $white;
     }
@@ -222,15 +234,86 @@
 }
 
 /* nav tab */
-.nav-tab{
-  .nav-link{
+.nav-tab {
+  .nav-link {
     padding: 15px;
     color: $text-color;
     border-radius: 5px;
-    &.active{
+
+    &.active {
       @extend .shadow;
       color: $white;
       background: $primary-color;
+    }
+  }
+}
+
+
+/* testimonial */
+.testimonial-item {
+  margin-bottom: 30px;
+
+  .comment {
+    padding: 40px 30px;
+    border: 1px solid $white;
+    margin-bottom: 20px;
+    position: relative;
+    transition: .3s ease;
+    background: $white;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      bottom: -27px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 30px 27px 0;
+      border-color: transparent $white transparent transparent;
+      transition: .3s ease;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -1px;
+      bottom: -26px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 28px 27px 0;
+      border-color: transparent $white transparent transparent;
+      transition: .3s ease;
+    }
+
+    &:hover {
+      background: $primary-color;
+      border: 1px solid $primary-color;
+      color: $white;
+
+      &:before {
+        border-color: transparent $primary-color transparent transparent;
+      }
+
+      &:after {
+        border-color: transparent $primary-color transparent transparent;
+      }
+    }
+  }
+
+  .media {
+    margin-left: 50px;
+
+    img {
+      height: 65px;
+      width: 65px;
+      border-radius: 100%;
+    }
+
+    .media-body {
+      margin-left: 15px;
+      align-self: center;
     }
   }
 }

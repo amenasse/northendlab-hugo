@@ -1,0 +1,24 @@
+enable : true
+title : "What People Say?"
+testimonial_item:
+  # testimonial item loop
+  - name : "John Doe"
+    image : "images/testimonial/client-1.jpg" # image size 100px * 100px
+    designation : "Web Developer"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptate modi sunt placeat in vel
+            illo dolorem, atque maxime voluptates optio fugit iure cum ipsa quo quaerat"
+            
+  # testimonial item loop
+  - name : "Jinat Rin"
+    image : "images/testimonial/client-2.jpg" # image size 100px * 100px
+    designation : "UI/UX Designer"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptate modi sunt placeat in vel
+            illo dolorem, atque maxime voluptates optio fugit iure cum ipsa quo quaerat! Veritatis, modi. Laudantium
+            provident deleniti earum voluptas delectus, labore dolor dolorem amet expedita."
+            
+  # testimonial item loop
+  - name : "Mark Din"
+    image : "images/testimonial/client-3.jpg" # image size 100px * 100px
+    designation : "Web Developer"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis voluptate modi sunt placeat in vel
+            illo dolorem, atque maxime voluptates optio fugit iure cum ipsa quo quaerat! Veritatis, modi."
