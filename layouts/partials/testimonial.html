@@ -1,7 +1,8 @@
 <!-- testimonial -->
 {{ if .Site.Data.testimonial.enable }}
+<section class="section bg-cover"  style="background-image: url('{{ .Site.Params.banner.bgImage | relURL }}');">
+
 {{ with .Site.Data.testimonial }}
-<section class="section bg-light">
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
