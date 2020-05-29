@@ -121,12 +121,12 @@
     </div>
     <div class="row">
       {{ range .testimonial_item }}
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-6 col-md-6">
         <!-- Testimonial -->
         <div class="testimonial-item">
           <!-- Given Comment -->
           <div class="comment match-height content">
-            {{ .content | markdownify }}
+            {{ .content  |safeHTML }}
           </div>
           <div class="person">
             <div class="media">
