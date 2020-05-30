@@ -42,6 +42,9 @@
 /* blog */
 .block {
   padding: 60px 60px 40px;
+  @include tablet {
+    padding: 40px 15px 30px;
+  }
 }
 
 .author-thumb {
