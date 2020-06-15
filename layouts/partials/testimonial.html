@@ -1,0 +1,39 @@
+<!-- testimonial -->
+{{ if .Site.Data.testimonial.enable }}
+<section class="section bg-cover"  style="background-image: url('{{ .Site.Params.banner.bgImage | relURL }}');">
+
+{{ with .Site.Data.testimonial }}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mb-5">{{ .title | markdownify }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{ range .testimonial_item }}
+      <div class="col-lg-6 col-md-6">
+        <!-- Testimonial -->
+        <div class="testimonial-item">
+          <!-- Given Comment -->
+          <div class="comment match-height content">
+            {{ .content  |safeHTML }}
+          </div>
+          <div class="person">
+            <div class="media">
+              <!-- Person Image -->
+              <img src="{{ .image | absURL }}" alt="{{ .name }}">
+              <div class="media-body">
+                <h5>{{ .name | markdownify }}</h5>
+                <small>{{ .designation | markdownify }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /testimonial -->
