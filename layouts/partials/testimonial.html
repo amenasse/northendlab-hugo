@@ -21,7 +21,8 @@
           <div class="person">
             <div class="media">
               <!-- Person Image -->
-              <img src="{{ .image | absURL }}" alt="{{ .name }}">
+              <a href="{{ .link}}">
+                <img src="{{ .image | absURL }}" alt="{{ .name }}"></a>
               <div class="media-body">
                 <h5>{{ .name | markdownify }}</h5>
                 <small>{{ .designation | markdownify }}</small>
