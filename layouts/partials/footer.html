@@ -36,7 +36,7 @@
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}
-{{ $scripts := resources.Get .link |  minify |fingerprint }}
+{{ $scripts := resources.Get .link |  fingerprint }}
 <script src="{{ $scripts.Permalink }}"></script>
 {{ end }}
 
