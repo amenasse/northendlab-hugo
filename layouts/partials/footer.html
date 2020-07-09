@@ -36,11 +36,12 @@
 
 {{ "<!-- JS Plugins -->" | safeHTML }}
 {{ range .Site.Params.plugins.js}}
-<script src="{{ .link | absURL }}"></script>
+{{ $scripts := resources.Get .link |  minify |fingerprint }}
+<script src="{{ $scripts.Permalink }}"></script>
 {{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}
-{{ $script := resources.Get "js/script.js" | minify}}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint }}
 <script src="{{ $script.Permalink }}"></script>
 
 {{ "<!-- google analitycs -->" | safeHTML }}
