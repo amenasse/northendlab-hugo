@@ -7,9 +7,16 @@
         <h2>{{ .Title | markdownify }}</h2>
         <div class="mb-3 post-meta">
           <a href="{{ `author/` | relLangURL }}{{ .Params.Author | urlize | lower }}">{{ .Params.Author }}</a>,
-          {{ .PublishDate.Format "02/01/2006" }}, {{ range .Params.Categories }}
+          {{ range .Params.Categories }}
           <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
           {{ end }}
+          <br>
+          {{ if ne .PublishDate .Lastmod }}
+          Published on {{ .PublishDate.Format "02/01/2006" }},
+          Updated {{ .Lastmod.Format "02/01/2006" }}
+          {{else}}
+          Published on {{ .PublishDate.Format "02/01/2006" }}
+          {{ end}}
         </div>
         {{ if .Params.Image }}
         <img src="{{ .Params.Image | relURL }}" class="img-fluid w-100 mb-1" alt="{{ .Params.Image_Alt }}">
