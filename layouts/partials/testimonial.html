@@ -4,7 +4,7 @@
 
 {{ with .Site.Data.testimonial }}
   <div class="container-fluid testimonials">
-    <h2 class="mb-5">{{ .title | markdownify }}</h2>
+    <h2 class="mb-5 sr-only">{{ .title | markdownify }}</h2>
     <div class="row">
       {{ range .testimonial_item }}
       <div class="col-lg-6 col-xl-4 col-md-12 col-sml-12">
